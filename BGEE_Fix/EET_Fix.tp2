@@ -1,0 +1,33 @@
+BACKUP ~BGEE_Fix/backup~
+AUTHOR ~Roxanne@baldursextendedworld.com~
+
+VERSION ~v1~
+
+BEGIN ~BGEE Fix~
+
+//Black Pit creature fix
+COPY ~BGEE_Fix/BPLLYRK.CRE~ ~override~
+SAY NAME1 Llyrk
+SAY NAME2 Llyrk
+
+COMPILE ~BGEE_Fix/BPSKEL.BAF~
+
+EXTEND_TOP
+~LLyrk.BCS~ ~BGEE_Fix/LLyrk.baf~
+ 
+STRING_SET
+239808 ~They all do, Mae'Var. For the moment.~
+
+COPY ~BGEE_Fix/potn47.itm~ ~override~
+
+EXTEND_BOTTOM ~ar3202.bcs~ ~BGEE_Fix/Thalan.baf~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~F_Bel.cre~ THEN BEGIN
+COPY_EXISTING ~F_Bel.cre~ ~override~
+     SAY NAME1 Eltab
+     SAY NAME2 Eltab
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~Sufinch4.cre~ THEN BEGIN
+EXTEND_BOTTOM ~BD0103.bcs~ ~BGEE_Fix/BD0103.baf~
+END
