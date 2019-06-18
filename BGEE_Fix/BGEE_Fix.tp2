@@ -16,7 +16,7 @@ EXTEND_TOP
 ~LLyrk.BCS~ ~BGEE_Fix/LLyrk.baf~
  
 STRING_SET
-239808 ~They all do, Mae'Var. For the moment.~
+39808 ~They all do, Mae'Var. For the moment.~
 
 COPY ~BGEE_Fix/potn47.itm~ ~override~
 
