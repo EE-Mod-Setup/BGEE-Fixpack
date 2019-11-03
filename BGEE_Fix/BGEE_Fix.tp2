@@ -51,8 +51,10 @@ COPY_EXISTING ~ar2300.WED~ ~override~
   END
 BUT_ONLY IF_EXISTS
 
+ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
 STRING_SET
 39808 ~They all do, Mae'Var. For the moment.~
+END
 
 COPY ~BGEE_Fix/potn47.itm~ ~override~
 
